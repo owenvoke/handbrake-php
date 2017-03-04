@@ -1,0 +1,17 @@
+{
+    "name": "pxgamer/handbrake-php",
+    "description": "A PHP integration with the Handbrake CLI.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PXgamer",
+            "email": "owzie123@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "pxgamer\\Handbrake\\": "src/"
+        }
+    }
+}
