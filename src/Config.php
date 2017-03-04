@@ -16,14 +16,14 @@ class Config
     private $frameRateType;
     private $additionalData;
 
-    public function __set($name, $value)
-    {
-        return $this->{$name} = $value;
-    }
-
     public function __get($name)
     {
         return $this->{$name};
+    }
+
+    public function __set($name, $value)
+    {
+        return $this->{$name} = $value;
     }
 
     public function getConfig()
