@@ -2,6 +2,13 @@
 
 A PHP integration with the Handbrake CLI.
 
+## Installation
+
+The fastest way to install is via [Composer](https://getcomposer.org) using the following command:
+`composer require pxgamer/handbrake-php`
+
+Alternatively, the 3 files in the `src/` folder can be included manually.
+
 ## Example code
 
 ```php
