@@ -4,17 +4,17 @@ namespace pxgamer\Handbrake;
 
 class Config
 {
-    private $input;
-    private $output;
-    private $audioLanguage;
-    private $bitRate;
-    private $mixdown;
-    private $videoRate;
-    private $audioRate;
-    private $encodingSceme;
-    private $quality;
-    private $frameRateType;
-    private $additionalData;
+    public $input;
+    public $output;
+    public $audioLanguage;
+    public $bitRate;
+    public $mixdown;
+    public $videoRate;
+    public $audioRate;
+    public $encodingSceme;
+    public $quality;
+    public $frameRateType;
+    public $additionalData;
 
     public function __get($name)
     {
