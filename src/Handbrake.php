@@ -2,17 +2,28 @@
 
 namespace pxgamer\Handbrake;
 
+/**
+ * Class Handbrake
+ * @package pxgamer\Handbrake
+ */
 class Handbrake
 {
     public $config;
     public $isComplete;
 
+    /**
+     * Handbrake constructor.
+     * @param Config $Config
+     */
     public function __construct($Config)
     {
         $this->config = $Config;
         $this->isComplete = false;
     }
 
+    /**
+     * @return bool|string
+     */
     public function run()
     {
         if (!isset($this->config) || get_class($this->config) !== 'pxgamer\Handbrake\Config') {
@@ -22,6 +33,9 @@ class Handbrake
         return exec($this->generateCommand());
     }
 
+    /**
+     * @return string
+     */
     private function generateCommand()
     {
         $commandString = App::HANDBRAKE_CLI;
