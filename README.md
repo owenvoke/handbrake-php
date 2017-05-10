@@ -21,8 +21,8 @@ use pxgamer\Handbrake as HB;
 $Config = new HB\Config;
 
 // Set Type40 Defaults
-$Config->input = 'C:/Users/PXgamer/Downloads/TEST.avi';
-$Config->output = 'C:/Users/PXgamer/Downloads/';
+$Config->input = '/home/user/test.avi';
+$Config->output = '/var/www/';
 $Config->audioLanguage = 'English';
 $Config->bitRate = '384k';
 $Config->mixdown = '6ch';
