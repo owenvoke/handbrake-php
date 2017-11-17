@@ -4,7 +4,6 @@ namespace pxgamer\Handbrake;
 
 /**
  * Class Config
- * @package pxgamer\Handbrake
  */
 class Config
 {

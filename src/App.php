@@ -4,7 +4,6 @@ namespace pxgamer\Handbrake;
 
 /**
  * Class App
- * @package pxgamer\Handbrake
  */
 class App
 {
