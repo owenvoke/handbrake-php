@@ -8,6 +8,10 @@ namespace pxgamer\Handbrake;
 class Handbrake
 {
     /**
+     * Default Handbrake CLI name.
+     */
+    public const HANDBRAKE_CLI = 'HandbrakeCLI';
+    /**
      * @var Config
      */
     public $config;
@@ -43,7 +47,11 @@ class Handbrake
      */
     private function generateCommand()
     {
-        $commandString = App::HANDBRAKE_CLI;
+        $commandString = self::HANDBRAKE_CLI;
+
+        if (isset($this->config->handbrakeBinary)) {
+            $commandString = $this->config->handbrakeBinary;
+        }
 
         if (isset($this->config->input)) {
             $commandString .= ' -i "'.$this->config->input.'"';

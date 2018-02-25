@@ -10,6 +10,10 @@ class Config
     /**
      * @var string
      */
+    public $handbrakeBinary;
+    /**
+     * @var string
+     */
     public $input;
     /**
      * @var string
