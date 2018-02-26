@@ -45,7 +45,7 @@ class Handbrake
     /**
      * @return string
      */
-    private function generateCommand()
+    public function generateCommand()
     {
         $commandString = self::HANDBRAKE_CLI;
 
