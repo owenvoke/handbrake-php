@@ -42,7 +42,7 @@ class Config
     /**
      * @var string
      */
-    public $encodingSceme;
+    public $encodingScheme;
     /**
      * @var string
      */

@@ -76,8 +76,8 @@ class Handbrake
             $commandString .= ' -R "'.$this->config->audioRate.'"';
         }
 
-        if (isset($this->config->encodingSceme)) {
-            $commandString .= ' -e "'.$this->config->encodingSceme.'"';
+        if (isset($this->config->encodingScheme)) {
+            $commandString .= ' -e "'.$this->config->encodingScheme.'"';
         }
 
         if (isset($this->config->quality)) {
