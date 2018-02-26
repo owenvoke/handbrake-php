@@ -55,31 +55,4 @@ class Config
      * @var string
      */
     public $additionalData;
-
-    /**
-     * @param string $name
-     * @return mixed
-     */
-    public function __get($name)
-    {
-        return $this->{$name};
-    }
-
-    /**
-     * @param string $name
-     * @param mixed $value
-     * @return mixed
-     */
-    public function __set($name, $value)
-    {
-        return $this->{$name} = $value;
-    }
-
-    /**
-     * @return $this
-     */
-    public function getConfig()
-    {
-        return $this;
-    }
 }
