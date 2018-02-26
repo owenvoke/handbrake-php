@@ -22,11 +22,11 @@ class Handbrake
 
     /**
      * Handbrake constructor.
-     * @param Config $Config
+     * @param Config $config
      */
-    public function __construct(Config $Config)
+    public function __construct(Config $config)
     {
-        $this->config = $Config;
+        $this->config = $config;
         $this->isComplete = false;
     }
 
