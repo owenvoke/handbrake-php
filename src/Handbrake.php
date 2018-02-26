@@ -15,10 +15,6 @@ class Handbrake
      * @var Config
      */
     public $config;
-    /**
-     * @var bool
-     */
-    public $isComplete;
 
     /**
      * Handbrake constructor.
@@ -27,7 +23,6 @@ class Handbrake
     public function __construct(Config $config)
     {
         $this->config = $config;
-        $this->isComplete = false;
     }
 
     /**
