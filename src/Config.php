@@ -46,6 +46,10 @@ class Config
     /**
      * @var string
      */
+    public $audioEncodingScheme;
+    /**
+     * @var string
+     */
     public $quality;
     /**
      * @var string
