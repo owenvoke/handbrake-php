@@ -116,6 +116,18 @@ class HandbrakeTest extends TestCase
         );
     }
 
+    public function testGenerateCommandAudioEncodingScheme()
+    {
+        $config = new Config();
+        $config->audioEncodingScheme = self::TEST_STRING;
+        $handbrake = new Handbrake($config);
+
+        $this->assertEquals(
+            Handbrake::HANDBRAKE_CLI.' -E "'.self::TEST_STRING.'"',
+            $handbrake->generateCommand()
+        );
+    }
+
     public function testGenerateCommandQuality()
     {
         $config = new Config();
