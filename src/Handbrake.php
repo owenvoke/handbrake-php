@@ -8,22 +8,21 @@ namespace pxgamer\Handbrake;
 class Handbrake
 {
     /**
+     * Default Handbrake CLI name.
+     */
+    public const HANDBRAKE_CLI = 'HandbrakeCLI';
+    /**
      * @var Config
      */
     public $config;
-    /**
-     * @var bool
-     */
-    public $isComplete;
 
     /**
      * Handbrake constructor.
-     * @param Config $Config
+     * @param Config $config
      */
-    public function __construct(Config $Config)
+    public function __construct(Config $config)
     {
-        $this->config = $Config;
-        $this->isComplete = false;
+        $this->config = $config;
     }
 
     /**
@@ -41,9 +40,13 @@ class Handbrake
     /**
      * @return string
      */
-    private function generateCommand()
+    public function generateCommand()
     {
-        $commandString = App::HANDBRAKE_CLI;
+        $commandString = self::HANDBRAKE_CLI;
+
+        if (isset($this->config->handbrakeBinary)) {
+            $commandString = $this->config->handbrakeBinary;
+        }
 
         if (isset($this->config->input)) {
             $commandString .= ' -i "'.$this->config->input.'"';
@@ -73,8 +76,12 @@ class Handbrake
             $commandString .= ' -R "'.$this->config->audioRate.'"';
         }
 
-        if (isset($this->config->encodingSceme)) {
-            $commandString .= ' -e "'.$this->config->encodingSceme.'"';
+        if (isset($this->config->encodingScheme)) {
+            $commandString .= ' -e "'.$this->config->encodingScheme.'"';
+        }
+
+        if (isset($this->config->audioEncodingScheme)) {
+            $commandString .= ' -E "'.$this->config->audioEncodingScheme.'"';
         }
 
         if (isset($this->config->quality)) {
