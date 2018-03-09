@@ -8,6 +8,15 @@ class HandbrakeTest extends TestCase
 {
     public const TEST_STRING = 'test/path/to';
 
+    public function testRunWithNoConfig()
+    {
+        $handbrake = new Handbrake(new Config());
+
+        $handbrake->config = null;
+
+        $this->assertFalse($handbrake->run());
+    }
+
     public function testGenerateCommandCustomBinary()
     {
         $config = new Config();
