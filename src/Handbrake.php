@@ -80,6 +80,10 @@ class Handbrake
             $commandString .= ' -e "'.$this->config->encodingScheme.'"';
         }
 
+        if (isset($this->config->audioEncodingScheme)) {
+            $commandString .= ' -E "'.$this->config->audioEncodingScheme.'"';
+        }
+
         if (isset($this->config->quality)) {
             $commandString .= ' -q "'.$this->config->quality.'"';
         }
