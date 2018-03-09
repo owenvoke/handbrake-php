@@ -45,6 +45,7 @@ $config->mixdown = '6ch';
 $config->videoRate = '23.976';
 $config->audioRate = '48';
 $config->encodingScheme = 'x264';
+$config->audioEncodingScheme = 'av_aac';
 $config->quality = '25';
 $config->frameRateType = 'cfr';
 $config->additionalData =
