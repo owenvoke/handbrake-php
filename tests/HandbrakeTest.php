@@ -104,7 +104,7 @@ class HandbrakeTest extends TestCase
         );
     }
 
-    public function testGenerateCommandEncodingSceme()
+    public function testGenerateCommandEncodingScheme()
     {
         $config = new Config();
         $config->encodingScheme = self::TEST_STRING;
